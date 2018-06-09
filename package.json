@@ -126,6 +126,7 @@
     "build-react-copy-electron": "yarn react-build && yarn copy-electron",
     "build": "yarn build-react-copy-electron && yarn electron-pack",
     "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron electron/electron.js\"",
+    "test": "yarn react-test",
     "plop": "plop",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "electron-pack": "electron-builder",
