@@ -7,3 +7,8 @@ install:
 script:
   - yarn test
   - CI=false yarn build --publish=never
+deploy:
+  provider: releases
+  skip_cleanup: true
+  on:
+    tags: false
