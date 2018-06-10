@@ -37,7 +37,7 @@ jobs:
       - run: yarn test
 
       # run build
-      - run: yarn build
+      - run: CI=false yarn build
       - store_artifacts:
           path: dist
 
