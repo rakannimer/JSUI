@@ -12,7 +12,11 @@ script:
   - yarn test
   - CI=false yarn build --publish=never
 deploy:
+  api_key: $GITHUB_API_KEY
   provider: releases
+  file_glob: true
+  file: "dist/*"
   skip_cleanup: true
   on:
     tags: false
+    repo: rakannimer/jsui
